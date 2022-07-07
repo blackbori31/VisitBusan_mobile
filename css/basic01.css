@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+@media (min-width:414px){
+    body { 
+        font-family: 'Noto Sans KR', 'Noto Sans', '맑은고딕', sans-serif;
+        width: 414px;
+        margin: auto;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    header {
+        background: #b8e9ff;
+        position:relative;
+        top:0; 
+        left: 0;
+        height:60px; 
+    }
+        .head_wrap {
+        }
+
+        .head_logo {}
+            h1 a {
+                float: left;
+                width: 50%;
+                height: 40px;
+                margin: 10px 0;
+                margin-left: 150px;
+                background: url('../img/logo_1.png') no-repeat;
+                text-indent: -9999px;
+            }
+        /* span으로 막대기 3개로 메뉴바 만들었음 */
+        .trigger {
+            position:relative; 
+            display:block; 
+            float:right; 
+            outline:none; 
+            width:22px; 
+            height:22px; 
+            background:transparent; 
+            margin:19px 10px 0 0; 
+            border:0; 
+            cursor:pointer; 
+        }
+        .trigger span { 
+            position:absolute; 
+            left:0; 
+            width:22px; 
+            height:2px; 
+            border-radius:1px; 
+            background:#ffffff; 
+            transition:.5s;
+        }
+        .trigger span:nth-child(1) { top:1px; }
+        .trigger span:nth-child(2) { top:50%; transform:translateY(-50%);}
+        .trigger span:nth-child(3) { bottom:1px;}
+
+        /* span으로 만든 막대기 3개 X모양 만들기 */
+        .trigger.close span:nth-child(1) { transform:rotate(45deg); margin-top:9px }
+        .trigger.close span:nth-child(2) { width:0; }
+        .trigger.close span:nth-child(3) { transform:rotate(-45deg); margin-bottom:9px; }
+
+        .head_mainnav { 
+            display: none;
+        }
+        .navItem {
+            float: left;
+            width: 414px;
+            height: 70px;
+            padding: 20px 10px 0 10px;
+            background: #b8e9ff;
+        }
+        .navItem1, .navItem3  {
+            padding: 10px;
+        }
+        .navItem2 {
+            padding: 10px 7px;
+        }
+        .navItem img {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+
+        .navItem a {
+            color: #fff;
+            padding: 10px;
+        }
+        .navItem1:hover, .navItem2:hover, .navItem3:hover {
+            background: rgba(17, 135, 207, 0.5);
+        }
+
+        .navItem1 {
+            float: left;
+        }
+
+        .navItem2 {
+            float: left;
+            padding: 10px 17px 10px 9px;
+        }
+
+        .navItem3 {
+            position: relative;
+            float: right;
+        }  
+        .nInner {
+        }
+        .nInner > ul {
+            display: none;
+            width:100%;  
+            height:auto; 
+            margin-top: 10px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index:101;
+            background: #b8e9ff;
+        }
+            .niList > li {
+                padding: 10px 0 10px 20px;
+            }
+            .niList > li:hover {
+                background: rgba(17, 135, 207, 0.7);
+            }
+
+            .niList > li > a {
+                color:#fff;
+            }
+        
+        .vinav { }
+        .main_nav {    
+            position: absolute;
+            top: 130px;
+        }
+            .nav { 
+                float: left;
+                height: 606px;
+                background: #b8e9ff;
+                z-index: 1;
+                position: absolute;
+            }
+            .nav > li {
+                position: relative;
+                float: left;
+                height: 72px;
+                width: 414px;
+            }
+            .nav > li:hover {
+                background: rgba(17, 135, 207, 0.5);
+            }
+            .nav > li > a {
+                display: block;
+                line-height: 30px;
+                font-size: 17px;
+                font-weight: 500;
+                color: #fff;
+                padding: 20px 40px;
+            }
+
+            /* 메뉴 옆 아이콘넣기 */
+            .icon {
+                position: absolute;
+                top: 25px;
+                left: 350px;
+            }
+            .icon img {
+                width: 25px;
+            }
+
+            .main_nav .nav > li.on .icon {
+                transform: rotate(180deg);
+            }
+            
+                .sub {
+                    display: none;
+                    width:100%;  
+                    height:auto; 
+                    position: absolute;
+                    left: 0;
+                    top: 72px;
+                    z-index:101;
+                    background: #b8e9ff;
+                }
+                .sub > li {
+                    padding: 10px 0 10px 30px;
+                }
+                .sub > li:hover {
+                    background: rgba(17, 135, 207, 0.7);
+                }
+                .sub > li > a {
+                    font-size: 17px;
+                    font-weight: 400;
+                    color:#fff;
+                    line-height: 1.5;
+                }
+
+/*========================================= 검색창 =======================================*/
+            .searchTop {
+                display: none;
+                width: 100%;
+                position: absolute;
+                z-index: 3;
+                left: 0;
+                top: 80px;
+            }
+            .searchArea {
+                background: #b8e9ff;
+                height: 656px;
+            }
+            .searchInner {
+                width: 414px;
+                margin: auto;
+            }
+        
+            .searchTop fieldset {
+                position: relative;
+                width: 394px;
+                height: 52px;
+                margin-left: 10px;
+                border-radius:5px;
+                background: #fff;
+            }
+            .searchTop #topquery {
+                width: 330px;
+                height: 52px;
+                line-height: 70px;
+                background:transparent; 
+                padding-left:20px; 
+                outline:none;
+            }
+            .searchTop button {
+                position:absolute; 
+                right:0; 
+                top:0; 
+                width:48px;
+                height:48px; 
+                background:url('../img/icon/icon_search3.png') no-repeat 5px 8px; text-indent:-9999px; 
+                cursor:pointer;
+            }
+
+    /* ======================================== 컨텐츠 부분 ==========================================*/
+    .smMenu {
+        padding-left: 10px;
+    }
+    .smMenu li {
+        margin: 35px 0;
+    }
+
+    .smMenu a { 
+        background: #02c9bd;
+        color: #fff;
+        width: 284px;
+        height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        padding-top: 8px;
+        display: block;
+        font-weight: 500;
+    }
+
+    .smBody { 
+    }
+    .smBody > div { 
+    }
+    .smBL {
+        float: left;
+        margin-left: 10px;
+    }
+    .smBR {
+        float: right;
+        margin-right: 10px;
+    }
+    .smBody a { 
+        text-align: center;
+    }
+    .smBody a img {
+        width: 192px;
+    }
+    .smBody a p {
+        font-size: 12px;
+        width: 192px;
+        height: 50px;
+        margin-bottom: 30px;
+        padding-top: 5px;
+        color: #222;
+        border: 1px solid #c9c9c9;
+    }
+
+    
+
+    /* ===================================== section01 끝 ======================================== */
+
+    footer {
+        display: inline-block;
+        background: #0e5783;
+        width: 100%;
+        height: 250px;
+        padding-top: 15px;
+        padding-left: 10px;
+        color: #fff;
+    }
+
+    .fleft {
+        line-height: 1.3;
+    }
+    .fleftA h3 {
+        font-size: 14px;
+    }
+    .fleftA img {
+        height: 40px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .fleftB a {
+        color:#fff;
+        font-size: 12px;
+        padding-right: 2px;
+    }
+    .fleftB p {
+        font-size: 12px;
+    }
+
+    .fright {
+        margin-top: 10px;
+    }
+    .fright .frightN {
+        font-weight: 500;
+    }
+    .fright h3 {
+        font-size: 14px;
+    }
+    .frightA {
+        float: left;
+        line-height: 2;
+    }
+    .frightB {
+        float: right;
+        line-height: 2;
+        margin-right: 10px;
+    }
+    .fbB {
+        font-size: 12px;
+    }
+}
