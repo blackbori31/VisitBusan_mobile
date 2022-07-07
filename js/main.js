@@ -19,7 +19,9 @@ $('.s4').click(function(){
 $('.navItem3 > a').click(function(){
     $('.nInner > .niList').toggle();
 });
-
+$('.nInner > .niList').mouseenter(function(){
+    $(this).show();
+});
 $('.nInner > .niList').mouseleave(function(){
     $(this).hide();
 });
