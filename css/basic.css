@@ -9,6 +9,8 @@
         margin: auto;
         font-size: 15px;
         font-weight: 400;
+        max-width:500px; 
+        min-width:414px;
     }
     header {
         background: #b8e9ff;
