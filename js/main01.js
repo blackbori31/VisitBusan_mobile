@@ -42,24 +42,6 @@ $('.nav > li').click(function(){
     $(this).toggleClass('on');
 });
 
-
-
-// 섹션2 광고베너 슬라이드
-var imgWidth =  $('#slider img').width(); 
-    var imgNumber =  $('#slider img').length; 
-    var sliderUl = $('#slider>ul');
-
-    sliderUl.css({width:imgWidth*imgNumber}); 
-
-    setInterval(function(){
-        sliderUl.animate({'margin-left':-imgWidth},2000,function(){
-            sliderUl.css({'margin-left':0});
-            sliderUl.find('li:first-child').insertAfter(sliderUl.find('li:last-child'));
-        });
-    },5000);
-
-
-
 // 팝업 닫기버튼
 const closeBtn = document.querySelector('.close');
 const elPopup = document.querySelector('#popup');
