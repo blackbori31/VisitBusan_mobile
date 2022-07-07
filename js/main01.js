@@ -17,7 +17,10 @@ $('.s4').click(function(){
 
 // Language 언어창 
 $('.navItem3 > a').click(function(){
-    $('.nInner > .niList').show();
+    $('.nInner > .niList').toggle();
+});
+$('.nInner > .niList').mouseenter(function(){
+    $(this).show();
 });
 $('.nInner > .niList').mouseleave(function(){
     $(this).hide();
