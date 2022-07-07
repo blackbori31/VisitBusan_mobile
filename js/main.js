@@ -62,13 +62,3 @@ var imgWidth =  $('#slider img').width();
             sliderUl.find('li:first-child').insertAfter(sliderUl.find('li:last-child'));
         });
     },5000);
-
-
-// 팝업 닫기버튼
-const closeBtn = document.querySelector('.close');
-const elPopup = document.querySelector('#popup');
-
-closeBtn.onclick = function(aa){
-    aa.preventDefault();            //a태그의 기본기능이 안되게 함
-    elPopup.style.display = "none"; 
-}
