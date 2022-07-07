@@ -44,26 +44,6 @@ $('.nav > li').click(function(){
 
 
 
-// 섹션1 메뉴바 누르면 움직이기
-const sBtn1 = document.querySelectorAll('.sectionsW .smMenu li'); 
-const sBody1 = document.querySelectorAll('.sectionsW .smBody>div'); 
-
-sBtn1.forEach(function(item,aa){
-    item.onclick = function(e){
-        e.preventDefault();
-
-        for(let i = 0; i < 3 ; i++){
-            sBtn1[i].classList.remove('list');
-            sBody1[i].style.display= 'none';
-        }
-
-        item.classList.add('list');
-        sBody1[aa].style.display= 'flex';
-    }
-});
-
-
-
 // 섹션2 광고베너 슬라이드
 var imgWidth =  $('#slider img').width(); 
     var imgNumber =  $('#slider img').length; 
