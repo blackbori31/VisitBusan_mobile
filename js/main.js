@@ -16,8 +16,12 @@ $('.s4').click(function(){
 
 
 // Language 언어창 나오게 하기
-$('.navItem3 > a').mouseenter(function(){
+$('.navItem3 > a').click(function(){
     $('.nInner > .niList').toggle();
+});
+
+$('.nInner > .niList').mouseleave(function(){
+    $(this).hide();
 });
 
 // 검색창 
